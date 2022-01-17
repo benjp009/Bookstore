@@ -1,6 +1,5 @@
-.book {
-  display: flex;
-  margin: 0 10vw;
+.book-form {
+  margin: 5vw 10vw;
   justify-content: space-between;
   padding: 10px;
   background-color: #ffffff;
