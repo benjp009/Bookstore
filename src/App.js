@@ -1,7 +1,7 @@
 import React from 'react';
 import {
   BrowserRouter as Router,
-  Switch,
+  Routes,
   Route,
   Link
 } from 'react-router-dom';
@@ -9,7 +9,6 @@ import Books from './redux/books/Books';
 import Categories from './redux/categories/Categories';
 
 // Design
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
@@ -34,14 +33,14 @@ function App() {
           you have multiple routes, but you want only one
           of them to render at a time
         */}
-        <Switch>
+        <Routes>
           <Route exact path="/">
             <Books />
           </Route>
           <Route path="/categories">
             <Categories />
           </Route>
-        </Switch>
+        </Routes>
       </div>
     </Router>
   );
