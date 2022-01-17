@@ -5,7 +5,7 @@ export default function BookProgress() {
     <div className="progress">
       <h2>Current Chapter</h2>
       <h3>Chapter 17</h3>
-      <button>Update Progress</button>
+      <button type="button">Update Progress</button>
     </div>
   );
 }

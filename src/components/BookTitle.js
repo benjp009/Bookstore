@@ -6,11 +6,11 @@ export default function BookTitle() {
       <p>Action</p>
       <h2>The Hunger Game</h2>
       <h3>Suzanne Collins</h3>
-        <div className="action">
-          <button>Comments</button>
-          <button>Remove</button>
-          <button>Edit</button>
-        </div>
+      <div className="action">
+        <button type="button">Comments</button>
+        <button type="button">Remove</button>
+        <button type="button">Edit</button>
+      </div>
     </div>
   );
 }

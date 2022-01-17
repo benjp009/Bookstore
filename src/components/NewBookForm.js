@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 
 export default function NewBookForm() {
-
-  const [bookCategory, setCategory] = useState("Category");
+  const [bookCategory, setCategory] = useState('Category');
 
   const handleChange = (event) => {
-    setCategory(event.target.value)
-  }
+    setCategory(event.target.value);
+  };
   return (
     <div className="book-form">
       <h2>Add New Book</h2>

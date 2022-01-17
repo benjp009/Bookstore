@@ -5,7 +5,9 @@ import {
   Route,
   Link,
 } from 'react-router-dom';
-import Books from './redux/books/Books.js';
+// eslint-disable-next-line import/extensions
+import Books from './redux/books/Books';
+// eslint-disable-next-line import/extensions
 import Categories from './redux/categories/Categories.js';
 
 // Design
