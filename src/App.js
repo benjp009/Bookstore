@@ -3,10 +3,10 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  Link
+  Link,
 } from 'react-router-dom';
-import Books from './redux/books/Books';
-import Categories from './redux/categories/Categories';
+import Books from './redux/books/Books.js';
+import Categories from './redux/categories/Categories.js';
 
 // Design
 import './App.css';
@@ -27,10 +27,10 @@ export default function App() {
         </nav>
 
         <Routes>
-          <Route path='/' element={<Books />} />
-          <Route path='categories' element={<Categories />} />
+          <Route path="/" element={<Books />} />
+          <Route path="categories" element={<Categories />} />
         </Routes>
       </div>
     </Router>
   );
-};
+}
