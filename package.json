@@ -36,17 +36,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "rules": {
-   "import/extensions": [
-      "error",
-      "ignorePackages",
-      {
-        "js": "never",
-        "jsx": "never",
-        "ts": "never",
-        "tsx": "never"
-      }
-   ]
- }
+  }
 }

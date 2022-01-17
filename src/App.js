@@ -5,8 +5,8 @@ import {
   Route,
   Link,
 } from 'react-router-dom';
-import Books from './redux/books/Books';
-import Categories from './redux/categories/Categories';
+import Books from './redux/books/Books.js';
+import Categories from './redux/categories/Categories.js';
 
 // Design
 import './App.css';
