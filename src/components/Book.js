@@ -4,7 +4,6 @@ import BookProgress from './BookProgress';
 import BookTitle from './BookTitle';
 import './Book.css';
 
-
 export default function Book() {
   return (
     <div className="book">
