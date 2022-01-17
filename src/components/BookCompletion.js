@@ -4,7 +4,7 @@ export default function BookCompletion() {
   return (
     <div className="completion">
       <div className="round">
-        <img></img>
+        <img alt="progress" />
       </div>
       <div>
         <h2>64%</h2>
