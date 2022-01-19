@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { removeBook } from '../redux/books/books';
+import BookCompletion from './BookCompletion';
+import BookProgress from './BookProgress';
 
 const Book = ({
   id, author, title, category,
@@ -12,12 +14,22 @@ const Book = ({
   };
   return (
     <>
-      <li className="book">
-        <p>{title}</p>
-        <p>{author}</p>
-        <p>{category}</p>
-        <button type="button" className="delBtn" onClick={() => { handleDelete(id); }}>Remove</button>
-      </li>
+      <div className="oneBook">
+        <div>
+          <li className="newBook">
+            <p>{title}</p>
+            <p>{author}</p>
+            <p>{category}</p>
+            <button type="button" className="delBtn" onClick={() => { handleDelete(id); }}>Remove</button>
+          </li>
+        </div>
+        <div className="completion">
+          <BookCompletion />
+        </div>
+        <div className="progress">
+          <BookProgress />
+        </div>
+      </div>
     </>
   );
 };

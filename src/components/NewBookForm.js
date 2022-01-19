@@ -49,9 +49,10 @@ const Form = () => {
     }
   };
   return (
-    <div className="form-container">
-      <form onSubmit={handleSubmit}>
-        <div className="form-group">
+    <div className="book-form">
+    <h2 className="title">Add New Book</h2>
+      <form className="form" onSubmit={handleSubmit}>
+        <div className="">
           <input
             type="text"
             placeholder="Enter name of author"

@@ -2,12 +2,14 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import Form from '../components/NewBookForm';
 import Book from '../components/Book';
+import './Books.css';
 
 const BookList = () => {
   const books = useSelector((state) => state.books);
   return (
-    <div>
-      <h2>List of Books</h2>
+    <div class="book-display">
+      <h2 class="title">List of Books</h2>
+      <div class="new-book">
       <ul>
         {books.map((book) => (
           <Book
@@ -19,6 +21,7 @@ const BookList = () => {
           />
         ))}
       </ul>
+      </div>
       <Form />
     </div>
   );

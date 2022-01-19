@@ -2,5 +2,10 @@
   margin: 5vw 10vw;
   justify-content: space-between;
   padding: 10px;
-  background-color: #fff;
+  /* background-color: #fff; */
+}
+
+.title {
+  text-align: center;
+  font-size: 28px;
 }

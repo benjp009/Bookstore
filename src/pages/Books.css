@@ -1,0 +1,46 @@
+.new-book {
+  display: flex;
+  flex-direction: column;
+  margin: 0 10vw;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.newBook {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin: 0 20px;
+}
+
+.title {
+  text-align: center;
+  font-size: 28px;
+}
+
+.book-form {
+  margin: 5vw 10vw;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #fff;
+}
+
+.form {
+  display: flex;
+  padding: 10px 15vw;
+  justify-content: space-evenly;
+}
+
+.title {
+  text-align: center;
+  font-size: 28px;
+}
+
+.oneBook {
+  display: flex;
+  margin: 10px 5vw;
+  padding: 10px;
+  justify-content: space-around;
+  background-color: #fff;
+}
