@@ -3,100 +3,90 @@ import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 import { addBook } from '../redux/books/books';
 
-import './NewBookForm.css';
-
-export default function NewBookForm() {
-
-  const [bookTitle, setBookTitle] = useState('');
-  const [bookAuthor, setBookAuthor] = useState('');
-  const [bookCategory, setBookCategory] = useState('');
+const Form = () => {
+  const [author, setAuthor] = useState('');
+  const [title, setTitle] = useState('');
+  const [category, setCategory] = useState('');
   const [authorError, setAuthorError] = useState('');
   const [titleError, setTitleError] = useState('');
   const dispatch = useDispatch();
-  const bookCategories = ['Action', 'Science Fiction', 'Fantasy', 'Economy', 'Business'];
-
-  const handleChangeTitle = (event) => {
-    setBookTitle(event.target.value);
-    setTitleError('');
-  }
-
-  const handleChangeAuthor = (event) => {
-    setBookAuthor(event.target.value);
+  const categories = ['Beauty', 'Movie'];
+  const handleChangeAuthor = (e) => {
+    setAuthor(e.target.value);
     setAuthorError('');
-  }
-
-  const handleChangeCategory = (event) => {
-    setBookCategory(event.target.value);
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
+  const handleChangeTitle = (e) => {
+    setTitle(e.target.value);
+    setTitleError('');
+  };
+
+  const handleChangeCategory = (e) => {
+    setCategory(e.target.value);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
     let error = false;
-    if (bookTitle.trim() === '') {
+    if (title.trim() === '') {
       error = true;
       setTitleError('Please enter your title');
     }
-    if (bookAuthor.trim() === '') {
+    if (author.trim() === '') {
       error = true;
       setAuthorError('Please enter your author');
     }
     if (!error) {
       const formData = {
-        id: uuidv4(), bookTitle, bookAuthor, bookCategory,
+        id: uuidv4(), title, author, category,
       };
       dispatch(addBook(formData));
-      setBookTitle('');
-      setBookAuthor('');
-      setBookCategory('');
+      setTitle('');
+      setAuthor('');
+      setCategory('');
       setTitleError('');
       setAuthorError('');
     }
   };
   return (
-    <div className="book-form">
-      <h2>Add New Book</h2>
+    <div className="form-container">
       <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          id="book-title"
-          value={bookTitle}
-          onChange={handleChangeTitle}
-          placeholder="Book Title"
-        />
-        <span>
-          {authorError}
-          {' '}
-        </span>
-        <input
-          type="text"
-          id="book-author"
-          value={bookAuthor}
-          onChange={handleChangeAuthor}
-          placeholder="Book Author"
-        />
-        <span>
-          {titleError}
-          {' '}
-        </span>
-        <select
-          value={bookCategory}
-          onChange={handleChangeCategory}
-          id="book-category"
-          name="book-category"
-        >
+        <div className="form-group">
+          <input
+            type="text"
+            placeholder="Enter name of author"
+            id="author"
+            onChange={handleChangeAuthor}
+            value={author}
+            required
+          />
+          <span>
+            {authorError}
+            {' '}
+          </span>
+        </div>
+        <div className="form-group">
+          <input
+            type="text"
+            placeholder="Enter name of title"
+            id="title"
+            onChange={handleChangeTitle}
+            value={title}
+            required
+          />
+        </div>
+        <span>{titleError}</span>
+        <select onChange={handleChangeCategory} value={category}>
           {
-            bookCategories.map((bookCategory) => (
-              <option
-                key={bookCategory}
-                value={bookCategory}
-              >
-                {bookCategory}
-              </option>
+            categories.map((category) => (
+              <option key={category} value={category}>{category}</option>
             ))
           }
         </select>
-        <input type="submit" id="submit-new-book" value="Add Book" />
+        <button type="button" className="addBtn" onClick={handleSubmit}>Add Book</button>
+
       </form>
     </div>
   );
-}
+};
+export default Form;
