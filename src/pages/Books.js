@@ -1,11 +1,16 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import Form from '../components/NewBookForm';
 import Book from '../components/Book';
+import { fetchBookAPI } from '../redux/books/books';
 import './Books.css';
 
 const BookList = () => {
   const books = useSelector((state) => state.books);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchBookAPI());
+  }, [dispatch]);
   return (
     <div className="book-display">
       <h2 className="title">List of Books</h2>
@@ -13,10 +18,10 @@ const BookList = () => {
         <ul>
           {books.map((book) => (
             <Book
-              key={book.id}
+              key={book.item_id}
               author={book.author}
               title={book.title}
-              id={book.id}
+              item_id={book.item_id}
               category={book.category}
             />
           ))}
