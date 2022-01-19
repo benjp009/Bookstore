@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
-import { addBook } from '../redux/books/books';
+import { addBookAPI } from '../redux/books/books';
 
 const Form = () => {
   const [author, setAuthor] = useState('');
@@ -10,7 +10,7 @@ const Form = () => {
   const [authorError, setAuthorError] = useState('');
   const [titleError, setTitleError] = useState('');
   const dispatch = useDispatch();
-  const categories = ['Beauty', 'Movie'];
+  const categories = ['Beauty', 'Movie', 'Love', 'Horror', 'Action', 'Classic'];
   const handleChangeAuthor = (e) => {
     setAuthor(e.target.value);
     setAuthorError('');
@@ -38,9 +38,9 @@ const Form = () => {
     }
     if (!error) {
       const formData = {
-        id: uuidv4(), title, author, category,
+        item_id: uuidv4(), title, author, category,
       };
-      dispatch(addBook(formData));
+      dispatch(addBookAPI(formData));
       setTitle('');
       setAuthor('');
       setCategory('');
@@ -84,7 +84,7 @@ const Form = () => {
             ))
           }
         </select>
-        <button type="button" className="addBtn" onClick={handleSubmit}>Add Book</button>
+        <input type="submit" value="Add Book" className="addBtn" onClick={handleSubmit} />
 
       </form>
     </div>
