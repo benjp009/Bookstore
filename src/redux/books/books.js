@@ -30,7 +30,6 @@ export const addBookAPI = (formData) => async (dispatch) => {
   } catch (error) {
     return error;
   }
-  return;
 };
 
 export const fetchBookAPI = () => async (dispatch) => {
@@ -47,7 +46,6 @@ export const fetchBookAPI = () => async (dispatch) => {
   } catch (error) {
     return error;
   }
-  return;
 };
 
 export const removeBookAPI = (payload) => async (dispatch) => {
@@ -57,7 +55,6 @@ export const removeBookAPI = (payload) => async (dispatch) => {
   } catch (error) {
     return error;
   }
-  return;
 };
 
 // initialize State
