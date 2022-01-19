@@ -31,11 +31,6 @@
   justify-content: space-evenly;
 }
 
-.title {
-  text-align: center;
-  font-size: 28px;
-}
-
 .oneBook {
   display: flex;
   margin: 10px 5vw;

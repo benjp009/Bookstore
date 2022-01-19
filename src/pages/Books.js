@@ -7,9 +7,9 @@ import './Books.css';
 const BookList = () => {
   const books = useSelector((state) => state.books);
   return (
-    <div class="book-display">
-      <h2 class="title">List of Books</h2>
-      <div class="new-book">
+    <div className="book-display">
+      <h2 className="title">List of Books</h2>
+      <div className="new-book">
       <ul>
         {books.map((book) => (
           <Book

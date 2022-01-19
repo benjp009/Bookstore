@@ -50,7 +50,7 @@ const Form = () => {
   };
   return (
     <div className="book-form">
-    <h2 className="title">Add New Book</h2>
+      <h2 className="title">Add New Book</h2>
       <form className="form" onSubmit={handleSubmit}>
         <div className="">
           <input
