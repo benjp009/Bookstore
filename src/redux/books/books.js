@@ -22,6 +22,7 @@ const fetchBook = (payload) => ({
   payload,
 });
 
+// eslint-disable-next-line consistent-return
 export const addBookAPI = (formData) => async (dispatch) => {
   try {
     await Axios.post('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/oF2DlchTxHbEjx4GHO3I/books',
@@ -32,6 +33,7 @@ export const addBookAPI = (formData) => async (dispatch) => {
   }
 };
 
+// eslint-disable-next-line consistent-return
 export const fetchBookAPI = () => async (dispatch) => {
   try {
     const { data } = await Axios.get('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/oF2DlchTxHbEjx4GHO3I/books');
@@ -48,6 +50,7 @@ export const fetchBookAPI = () => async (dispatch) => {
   }
 };
 
+// eslint-disable-next-line consistent-return
 export const removeBookAPI = (payload) => async (dispatch) => {
   try {
     await Axios.delete(`https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/oF2DlchTxHbEjx4GHO3I/books/${payload}`);
