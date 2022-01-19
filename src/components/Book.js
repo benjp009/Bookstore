@@ -6,6 +6,7 @@ import BookCompletion from './BookCompletion';
 import BookProgress from './BookProgress';
 
 const Book = ({
+  // eslint-disable-next-line camelcase
   item_id, author, title, category,
 }) => {
   const dispatch = useDispatch();

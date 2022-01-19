@@ -25,11 +25,12 @@ const fetchBook = (payload) => ({
 export const addBookAPI = (formData) => async (dispatch) => {
   try {
     await Axios.post('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/oF2DlchTxHbEjx4GHO3I/books',
-    formData);
-      dispatch(addBook(formData));
+      formData);
+    dispatch(addBook(formData));
   } catch (error) {
     return error;
   }
+  return;
 };
 
 export const fetchBookAPI = () => async (dispatch) => {
@@ -46,15 +47,17 @@ export const fetchBookAPI = () => async (dispatch) => {
   } catch (error) {
     return error;
   }
+  return;
 };
 
 export const removeBookAPI = (payload) => async (dispatch) => {
   try {
     await Axios.delete(`https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/oF2DlchTxHbEjx4GHO3I/books/${payload}`);
-      dispatch(removeBook(payload));
+    dispatch(removeBook(payload));
   } catch (error) {
     return error;
   }
+  return;
 };
 
 // initialize State
