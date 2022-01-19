@@ -14,3 +14,20 @@ export default function BookTitle() {
     </div>
   );
 }
+
+//
+// export default function BookTitle({ book, onClick}) {
+//   const { id, title, category, author } = book;
+//   return (
+//     <div className="title" id={id}>
+//       <p className="category">{category}</p>
+//       <h2 className="book-title">{title}</h2>
+//       <h3 className="author">{author}</h3>
+//       <div className="action">
+//         <button type="button">Comments</button>
+//         <button type="button">Remove</button>
+//         <button type="button">Edit</button>
+//       </div>
+//     </div>
+//   );
+// }
