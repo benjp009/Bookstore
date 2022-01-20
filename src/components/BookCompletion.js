@@ -21,7 +21,7 @@ export default function BookCompletion() {
         </svg>
       </div>
       <div>
-        <h2>64%</h2>
+        <h2>0%</h2>
         <p>Completed</p>
       </div>
     </div>
