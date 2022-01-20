@@ -5,10 +5,10 @@ import {
   Route,
   Link,
 } from 'react-router-dom';
-import Books from './pages/Books';
-import Categories from './pages/Categories';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
+import Books from './pages/Books';
+import Categories from './pages/Categories';
 
 // Design
 import './App.css';
