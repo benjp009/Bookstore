@@ -52,6 +52,19 @@ const Form = () => {
     <div className="book-form">
       <h2 className="title">Add New Book</h2>
       <form className="form" onSubmit={handleSubmit}>
+        <div className="form-group">
+          <input
+            type="text"
+            placeholder="Enter name of title"
+            id="title"
+            onChange={handleChangeTitle}
+            value={title}
+            required
+          />
+          <span>
+            {titleError}
+          </span>
+        </div>
         <div className="">
           <input
             type="text"
@@ -66,17 +79,6 @@ const Form = () => {
             {' '}
           </span>
         </div>
-        <div className="form-group">
-          <input
-            type="text"
-            placeholder="Enter name of title"
-            id="title"
-            onChange={handleChangeTitle}
-            value={title}
-            required
-          />
-        </div>
-        <span>{titleError}</span>
         <select onChange={handleChangeCategory} value={category}>
           {
             categories.map((category) => (
@@ -84,7 +86,7 @@ const Form = () => {
             ))
           }
         </select>
-        <input type="submit" value="Add Book" className="addBtn" onClick={handleSubmit} />
+        <input type="submit" value="Add Book" className="addBtn progressButton" onClick={handleSubmit} />
 
       </form>
     </div>

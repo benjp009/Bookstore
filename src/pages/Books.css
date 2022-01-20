@@ -9,6 +9,7 @@
 .newBook {
   list-style: none;
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
   width: 100%;
   margin: 0 20px;
@@ -37,4 +38,63 @@
   padding: 10px;
   justify-content: space-around;
   background-color: #fff;
+}
+
+.oneBookButton {
+  margin: 30px 0 0 0;
+}
+
+.actionButton {
+  border: 0;
+  background-color: #fff;
+  color: #5b96c8;
+}
+
+.newBookCategory {
+  font-size: 18px;
+  font-weight: bold;
+  color: #888888;
+  margin: 0;
+}
+
+.newBookTitle {
+  font-size: 24px;
+  margin: 5px 0 0 0;
+  font-weight: bolder;
+}
+
+.newBookAuthor {
+  font-size: 16px;
+  margin: 0;
+  font-weight: bolder;
+  color: #5b96c8;
+}
+
+.progressCurrent {
+  font-size: 0.813rem;
+  font-family: RobotoSlab;
+  opacity: 0.5;
+  letter-spacing: normal;
+  font-stretch: condensed;
+  font-variant: small-caps;
+}
+
+.progressChapter {
+  margin: 0 0 10px 0;
+  font-size: 1rem;
+  font-family: RobotoSlab;
+  letter-spacing: -0.4px;
+  font-weight: 300;
+}
+
+.progressButton {
+  width: 10rem;
+ height: 2rem;
+ border: 0;
+ border-radius: 5px;
+ background-color: #0290ff;
+ color: #fff;
+ font-size: 0.8rem;
+ font-variant-caps: all-small-caps;
+
 }
