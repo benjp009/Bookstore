@@ -17,7 +17,7 @@ export const Login = () => (
   <div className="iconContainer">
     <FontAwesomeIcon className="icon" icon={faUser} />
   </div>
-)
+);
 
 export default function App() {
   return (
