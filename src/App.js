@@ -15,17 +15,21 @@ export default function App() {
   return (
     <Router>
       <div>
-        <nav>
-          <ul>
+      <div className="header">
+        <div>
+          <h1 className="headerTitle">Bookstore Ben</h1>
+        </div>
+        <nav className="NavContainer">
+          <ul className="navBar">
             <li>
-              <Link to="/">Books</Link>
+              <Link to="/" className="navItem">Books</Link>
             </li>
             <li>
-              <Link to="categories">Categories</Link>
+              <Link to="categories" className="navItem">Categories</Link>
             </li>
           </ul>
         </nav>
-
+        </div>
         <Routes>
           <Route path="/" element={<Books />} />
           <Route path="categories" element={<Categories />} />
