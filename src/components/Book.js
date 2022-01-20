@@ -25,9 +25,9 @@ const Book = ({
             </li>
           </div>
           <div className="oneBookButton">
-            <button className="actionButton">Comment</button>
+            <button type="button" className="actionButton">Comment</button>
             <button type="button" className="delBtn actionButton" onClick={() => { handleDelete(item_id); }}>Remove</button>
-            <button className="actionButton">Edit</button>
+            <button type="button" className="actionButton">Edit</button>
           </div>
         </div>
 
