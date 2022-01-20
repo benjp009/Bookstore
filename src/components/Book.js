@@ -16,17 +16,25 @@ const Book = ({
   return (
     <>
       <div className="oneBook">
-        <div>
-          <li className="newBook">
-            <p>{title}</p>
-            <p>{author}</p>
-            <p>{category}</p>
-            <button type="button" className="delBtn" onClick={() => { handleDelete(item_id); }}>Remove</button>
-          </li>
+        <div className="oneBookTitle">
+          <div>
+            <li className="newBook">
+              <p className="newBookCategory">{category}</p>
+              <p className="newBookTitle">{title}</p>
+              <p className="newBookAuthor">{author}</p>
+            </li>
+          </div>
+          <div className="oneBookButton">
+            <button type="button" className="actionButton">Comment</button>
+            <button type="button" className="delBtn actionButton" onClick={() => { handleDelete(item_id); }}>Remove</button>
+            <button type="button" className="actionButton">Edit</button>
+          </div>
         </div>
+
         <div className="completion">
           <BookCompletion />
         </div>
+        <div className="vl" />
         <div className="progress">
           <BookProgress />
         </div>

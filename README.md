@@ -5,6 +5,9 @@ The goal of the exercise is to create a working bookstore with React & Redux .
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 
+![Screenshot 2022-01-20 at 09 30 13](https://user-images.githubusercontent.com/31847346/150301763-566ab562-3b33-45bc-b782-a41a31d3595d.png)
+
+
 ## Built With
 
 - HTML

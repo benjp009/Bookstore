@@ -9,6 +9,7 @@
 .newBook {
   list-style: none;
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
   width: 100%;
   margin: 0 20px;
@@ -17,6 +18,9 @@
 .title {
   text-align: center;
   font-size: 28px;
+  color: #888;
+  letter-spacing: -0.18px;
+  font-variant: all-small-caps;
 }
 
 .book-form {
@@ -37,4 +41,136 @@
   padding: 10px;
   justify-content: space-around;
   background-color: #fff;
+}
+
+.oneBookButton {
+  margin: 30px 0 0 0;
+}
+
+.actionButton {
+  border: 0;
+  background-color: #fff;
+  color: #5b96c8;
+}
+
+.newBookCategory {
+  font-size: 18px;
+  font-weight: bold;
+  color: #888;
+  margin: 0;
+}
+
+.newBookTitle {
+  font-size: 24px;
+  margin: 5px 0 0 0;
+  font-weight: bolder;
+}
+
+.newBookAuthor {
+  font-size: 16px;
+  margin: 0;
+  font-weight: bolder;
+  color: #5b96c8;
+}
+
+.progressCurrent {
+  font-size: 0.813rem;
+  font-family: RobotoSlab, Arial, sans-serif;
+  opacity: 0.5;
+  letter-spacing: normal;
+  font-stretch: condensed;
+  font-variant: small-caps;
+}
+
+.progressChapter {
+  margin: 0 0 10px 0;
+  font-size: 1rem;
+  font-family: RobotoSlab, Arial, sans-serif;
+  letter-spacing: -0.4px;
+  font-weight: 300;
+}
+
+.progressButton {
+  width: 10rem;
+  height: 2rem;
+  border: 0;
+  border-radius: 5px;
+  background-color: #0290ff;
+  color: #fff;
+  font-size: 0.8rem;
+  font-variant-caps: all-small-caps;
+}
+
+.completion {
+  display: flex;
+  align-items: center;
+}
+
+.round {
+  padding: 0 20px;
+}
+
+input,
+select {
+  border: 0;
+  padding: 10px;
+  width: 10em;
+}
+
+ul {
+  list-style: none;
+}
+
+.header {
+  display: flex;
+  background-color: #fff;
+  padding: 0 20px 0 40px;
+}
+
+.NavContainer {
+  width: 60%;
+}
+
+.navBar {
+  display: flex;
+  margin: 30px 0 0 0;
+}
+
+.vl {
+  border-left: 2px solid #e8e8e8;
+  margin: 20px;
+  height: 70px;
+}
+
+.navItem {
+  padding: 0 20px;
+  font-variant-caps: all-small-caps;
+  color: #121212;
+  text-decoration: none;
+  opacity: 0.5;
+}
+
+.navItem:hover {
+  opacity: 1;
+}
+
+.navItem:active {
+  opacity: 1;
+}
+
+.headerTitle {
+  color: #0290ff;
+}
+
+.iconContainer {
+  width: 80px;
+  height: 100%;
+}
+
+.icon {
+  padding: 20px;
+  margin: 20px 0;
+  color: #0290ff;
+  border-radius: 100px;
+  border: 1px solid #e8e8e8;
 }
