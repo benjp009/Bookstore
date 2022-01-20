@@ -75,7 +75,7 @@
 
 .progressCurrent {
   font-size: 0.813rem;
-  font-family: RobotoSlab, Arial;
+  font-family: RobotoSlab, Arial, sans-serif;
   opacity: 0.5;
   letter-spacing: normal;
   font-stretch: condensed;
@@ -85,7 +85,7 @@
 .progressChapter {
   margin: 0 0 10px 0;
   font-size: 1rem;
-  font-family: RobotoSlab, Arial;
+  font-family: RobotoSlab, Arial, sans-serif;
   letter-spacing: -0.4px;
   font-weight: 300;
 }
