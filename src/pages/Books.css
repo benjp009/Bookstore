@@ -128,12 +128,18 @@ ul {
 }
 
 .NavContainer {
-  width: 70%;
+  width: 60%;
 }
 
 .navBar {
   display: flex;
   margin: 30px 0 0 0;
+}
+
+.vl {
+  border-left: 2px solid #e8e8e8;
+  margin: 20px;
+  height: 70px;
 }
 
 .navItem {
@@ -154,4 +160,17 @@ ul {
 
 .headerTitle {
   color: #0290ff;
+}
+
+.iconContainer {
+  width: 80px;
+  height: 100%;
+}
+
+.icon {
+  padding: 20px;
+  margin: 20px 0;
+  color: #0290ff;
+  border-radius: 100px;
+  border: 1px solid #e8e8e8;
 }

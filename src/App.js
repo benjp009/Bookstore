@@ -7,9 +7,17 @@ import {
 } from 'react-router-dom';
 import Books from './pages/Books';
 import Categories from './pages/Categories';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser } from '@fortawesome/free-solid-svg-icons';
 
 // Design
 import './App.css';
+
+export const Login = () => (
+  <div className="iconContainer">
+    <FontAwesomeIcon className="icon" icon={faUser} />
+  </div>
+)
 
 export default function App() {
   return (
@@ -29,6 +37,7 @@ export default function App() {
               </li>
             </ul>
           </nav>
+          <Login />
         </div>
         <Routes>
           <Route path="/" element={<Books />} />

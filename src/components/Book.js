@@ -34,6 +34,8 @@ const Book = ({
         <div className="completion">
           <BookCompletion />
         </div>
+        <div class="vl">
+        </div>
         <div className="progress">
           <BookProgress />
         </div>
